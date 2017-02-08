@@ -47,31 +47,14 @@ class students(models.Model):
 		if d_of_jo > to_day :
 			raise ValidationError(_('the date of join is in the future !!'))
 
-
-
-
-
-
-
-
-	_sql_constraints = [
-        ('name_uniq', 'unique (name)', 'The name of the student must be unique !'),
-	]
-
-
-
-
-
-
-
-
-
-
-
  	@api.one
 	def copy(self, default=None):
 		default = dict(default or {})
 		default.update(name=_("%s (copy)") % (self.name or ''))
 		default.update(email=_("%s (copy)") % (self.email or ''))
-		default.update(date_of_joint=_("%s (copy)") % (self.date_of_joint or ''))
 		return super(students, self).copy(default)
+
+
+	_sql_constraints = [
+        ('name_uniq', 'unique (name)', 'The name of the student must be unique !'),
+	]

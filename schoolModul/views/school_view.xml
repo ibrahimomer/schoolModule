@@ -65,63 +65,7 @@
 			</field>
 		</record>
 
-        <!--============ Employee inherits ============ -->
-		<!-- record id="view_employee_form_inherit" model="ir.ui.view">
-			<field name="name">hr.employee.form.inherit</field>
-			<field name="model">hr.employee</field>
-			<field name="inherit_id" ref="hr.view_employee_form" />
-			<field name="arch" type="xml">
-				<xpath expr="//sheet" position="before">
-					<header>
-						<button name="experiment" string="Experiment" states="draft"
-							class="oe_highlight" groups="base.group_user" />
-						<button name="approve" string="Approve" states="draft,experiment"
-							class="oe_highlight" groups="base.group_user" />
-						<button name="refuse" string="Refuse" states="approved,experiment"
-							class="oe_highlight" groups="base.group_user" />
-						<button string="Set to Draft" name="set_to_draft" states="refuse"
-							icon="gtk-convert" />
-						<field name="state" widget="statusbar"
-							statusbar_visible="draft,experiment,approved,refuse" />
-					</header>
-				</xpath>
-				<field name="name" position="replace">
-					<field name="name" attrs="{'readonly':[('state','not in', ('draft'))]}" translate="1"/>
-				</field>
-				<field name="department_id" position="replace">
-					<field name="department_id" required="1" attrs="{'readonly':[('state','not in', ('draft'))]}" />
-					<field name="company_id" groups="base.group_multi_company"
-						   on_change="onchange_company(company_id)" attrs="{'readonly':[('state','not in','draft')]}" />
-					<field name="dept_parent_id" invisible="1" />
-				</field>
-				<field name="job_id" position="replace">
-					<field name="job_id" required="1" attrs="{'readonly':[('state','not in', ('draft'))]}" />
-				</field>
-				<field name="gender" position="replace">
-					<field name="gender" required="1" attrs="{'readonly':[('state','not in', ('draft'))]}" />
-				</field>
-				<field name="marital" position="replace">
-					<field name="marital" required="1" attrs="{'readonly':[('state','not in', ('draft'))]}" />
-				</field>
-				<field name="birthday" position="replace">
-					<field name="birthday" required="1" attrs="{'readonly':[('state','not in', ('draft'))]}" />
-				</field>
-				<xpath expr='//field[@name="category_ids"]' position="replace" > 
-					<field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time" groups="base.group_hr_user" attrs="{'readonly':[('state','not in',('draft'))]}"/> 
-					<group col="2" colspan="4">
-						<field name="emp_code" />
-						<field name="sequence" />
-						<field name="employee_type" invisible="1" />
-					</group>
-				</xpath>
-						
-				<field name="parent_id" on_change="onchange_department_id(department_id)" />
-				
-				
-				<field name="coach_id" position="replace"> </field>
-			</field>
-		</record-->
-
+       
 <!-- teacher tree views -->
 
 		<record id="view_teacher_tree" model="ir.ui.view">
