@@ -191,8 +191,7 @@
 							<field name="name" />
 							<field name="code"/>
 							<field name="exam_type" />
-							<field name="start_date"/>
-					
+							<field name="start_date"/>	
 				</tree>
 			</field>
 		</record>

@@ -29,15 +29,11 @@
 							<field name="user_id" placeholder="Name" style="width: 22em"       domain="[('user_id','!=','id')]"/>
 
 							<field name="code" placeholder="Code" style="width: 10em"/>
+							<field name="patch" placeholder="2017-2018" style="width: 10em"/>
 
 						</h1>
 						</group>
 
-						<group>
-							<h2>
-							<!--field name="patch" placeholder="2017-2018"/-->
-							</h2>
-						</group>
 
 						<group col="4" colspan="4">
 
@@ -108,7 +104,7 @@
 		</record>
 
 		<!-- student patch filter -->
-		<!-- record id="view_student_filter" model="ir.ui.view">
+		<record id="view_student_filter" model="ir.ui.view">
 			<field name="name">students_patch_search</field>
 			<field name="model">students</field>
 			<field name="type">search</field>
@@ -119,7 +115,7 @@
 						<separator orientation="vertical" />
 					
 			</field>
-		</record-->
+		</record>
 
 
 <!-- student action -->
@@ -136,37 +132,7 @@
 			name="Students" action="action_student" />
 
 
-	    <!-- xpath expr="//page[2]" position="after">
-		                <page string="Operation">
-		                    <field name="history_ids">
-		                        <tree string="Operation Lines" editable="top" colors="blue:state == 'draft';black:state == 'posted'">
-                                    <field name="auto_move" invisible="1"/>
-		                            <field name="type"  on_change="onchange_type(False,type,parent.category_id)" />
-		                            <field name="rehab_type"/>
-		                            <field name="date"/>
-		                            <field name="account_id"  
-					    attrs="{'readonly':[('type','=','abandon')],'required':[('auto_move','!=',True),('type','in',('initial','revalue','sale'))], 'invisible':[('auto_move','=',True)]}"  />
-		                            <field name="name"/>
-		                            <field name="amount"  attrs="{'readonly':[('type','=','abandon')]}"  />
-		                            <field name="state"/>
-		                            <button name="create_operation_move"  attrs="{'invisible':[('state','in',('posted','reversed'))]}" icon="gtk-execute" string="Create Move" type="object"/>
-
-		                        </tree>	
-		                    </field>
-		                </page>
-		                <page string="Journal Entries">
-		                    <field name="account_move_ids" readonly="1"/>
-		                </page>
-			</xpath>
-
-			<xpath expr="//field[@name='date']" position="after">
-                   		<field name="location_id" />
-                   		<field name="employee_id" />
-            </xpath>
-
-			<xpath expr="//field[@name='category_id']" position="after">
-                   		<field name="cat_depreciable" invisible="1"/>
-            </xpath-->
+	    
 
 </data>
 </openerp>
