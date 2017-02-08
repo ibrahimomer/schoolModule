@@ -197,7 +197,19 @@
 			</field>
 		</record>
 
-
+		
+		<record id="view_exams_filter" model="ir.ui.view">
+			<field name="name">exam__search</field>
+			<field name="model">exams</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				
+						<filter string="exam type" icon="terp-folder-orange"
+							domain="" context="{'group_by':'exam_type'}" />
+						<separator orientation="vertical" />
+						
+			</field>
+		</record>
 
 		<!-- Results form views -->
 		<record id="view_exam_Results_form" model="ir.ui.view">
