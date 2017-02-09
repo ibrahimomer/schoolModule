@@ -198,6 +198,11 @@ class exams(models.Model) :
 
 	@api.model
 	def name_search(self, name, args=None, operator='ilike', limit=100):
+		""" this function didn't work the target from function 
+		to show only the exam that was not selected for the active student 
+		by other words i wnat to ensure that the student has just one selected exam
+		at the time  """
+		
 		args = args or []
 		recs = self.browse()
 		exam_resu = self.env['exam_results'].search([],limit=4)
@@ -243,7 +248,7 @@ class attendance(models.Model) :
 	#course
 
 
-
+	############# these features did not apply in the system ###############################
 	# this main attendance Registers , i must add another model to  (attendance sheet )
 	# that shows Register which configuar in above model and the code of register and its name 
     # and the date and will be in (attendance sheet ) tab of ( students) which contains student
