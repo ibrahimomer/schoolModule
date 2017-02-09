@@ -9,11 +9,15 @@ class courses_info_wiz_cl(report_sxw.rml_parse):
 
     def __init__(self, cr, uid, name, context):
 
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22 init"
+
         super(courses_info_wiz_cl, self).__init__(cr, uid, name, context=context)
         self.localcontext.update({
             'line': self.set_context,
         })
+        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22 init"
+
+        #don't enter here i wonder why 
+
         
         self.context = context
     

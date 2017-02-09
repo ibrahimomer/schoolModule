@@ -19,6 +19,7 @@
                 menu="False" />
         </data>
         <data>
+                
         <report id="courses_info"
                 string="courses information"
                 model="courses"
