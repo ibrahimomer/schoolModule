@@ -75,6 +75,8 @@ class teachers(models.Model) :
 
 	@api.onchange('date_of_joint')
 	def onchange_birth_joint_date(self):
+		""" this function is checking date of joint if in the 
+		future raise message """
 
 		fmt = '%Y-%m-%d'
 		if not self.date_of_joint :
