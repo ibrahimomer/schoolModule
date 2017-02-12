@@ -12,7 +12,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
             'line': self.set_context(),
         })
 
-        #don't enter here i wonder why 
+        #it didin't enter here i wonder why 
         print "##########################" ,self.set_context
         
         self.context = context

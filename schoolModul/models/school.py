@@ -304,6 +304,8 @@ class exam_type(models.Model) :
 
 
 
+# these features didnot applied yet .
+# need analysis 
 
 '''
 

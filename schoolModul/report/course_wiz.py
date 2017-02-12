@@ -14,7 +14,7 @@ class courses_info_wiz_cl(report_sxw.rml_parse):
         self.localcontext.update({
             'line': self.set_context,
         })
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22 init"
+        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ init"
 
         #don't enter here i wonder why 
 
