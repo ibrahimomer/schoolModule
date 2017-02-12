@@ -13,7 +13,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
         })
 
         #it didin't enter here i wonder why 
-        print "##########################" ,self.set_context
+        print "########################## inti" ,self.set_context
         
         self.context = context
     
@@ -22,6 +22,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
         
         self.cr.execute(''' select * from students ''')
         res = self.cr.dictfetchall()
+        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ set_context"
         return res
     
 class school_stu_re_wiz(models.AbstractModel):

@@ -19,7 +19,7 @@
 		
 		<b><h4>student Information  :</h4></b>
 	
-		<table class="table table-bordered">
+		<!--table class="table table-bordered">
 			
 				<th> # </th>
 				<th> name </th>
@@ -38,7 +38,7 @@
 				<td ><span t-esc="stu['mobile']"/></td>
 				          		
     	</tr>
-		</table>
+		</table-->
 	
             	</div>
            </t>
