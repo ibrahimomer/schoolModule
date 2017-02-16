@@ -26,6 +26,4 @@ class student_wizard(osv.osv_memory):
                 }
         datas['form']['ids']=datas['ids']
 
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@22 print_report" , data
-
         return self.pool['report'].get_action(cr, uid, [], 'schoolModul.students_info_report_wiz', data=datas, context=context)

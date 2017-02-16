@@ -19,7 +19,7 @@
 		
 		<b><h4>student Information  :</h4></b>
 	
-		<!--table class="table table-bordered">
+		<table class="table table-bordered">
 			
 				<th> # </th>
 				<th> name </th>
@@ -28,7 +28,7 @@
 				<th> date of birth</th>
 				<th> date of joint </th>
 				<th> mobile </th>
-		<tr t-foreach="line(data['form'])" t-as="stu">
+		<tr t-foreach="line(o)" t-as="stu">
 				<td ><span t-esc="stu['id']"/></td>
 				<td ><span t-esc="stu['name']"/></td>
 				<td ><span t-esc="stu['status']"/></td> 
@@ -38,7 +38,7 @@
 				<td ><span t-esc="stu['mobile']"/></td>
 				          		
     	</tr>
-		</table-->
+		</table>
 	
             	</div>
            </t>
