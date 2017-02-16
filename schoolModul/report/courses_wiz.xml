@@ -18,22 +18,20 @@
 		<u><i><b><h4 align="center">courses Details</h4></b></i></u>
 		
 	<b><h4>courses Information  :</h4></b>
-	<table>
+	<!--table>
 	<tr>
 	<td ><span t-esc="formatLang(data['form']['start_date']"/></td>
 	<td ><span t-esc="formatLang(data['form']['end_date']"/></td> 
     </tr>
-	</table>
+	</table-->
 	
 	<table class="table table-bordered">
 			
 				<th> # </th>
-				<th>subjects</th>
-	<tr t-foreach="line(data['form'])" t-as="l">
+				<th>name</th>
+	<tr t-foreach="line()" t-as="l">
 				<td ><span t-esc="l['id']"/></td>
-				<td ><span t-esc="l['maximum_marks']"/></td>
-				<td ><span t-esc="l['minimum_marks']"/></td> 
-      			<td ><span t-esc="l['grade_id']"/></td>			          		
+				<td ><span t-esc="l['name']"/></td>		          		
     </tr>
 	</table>
 	

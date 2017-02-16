@@ -23,5 +23,4 @@ class course_wizard(models.Model):
              'form': data
                 }
         datas['form']['ids']=datas['ids']
-        print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ print_report" , datas
         return self.pool['report'].get_action(cr, uid, [], 'schoolModul.courses_info_wiz', data=datas, context=context)

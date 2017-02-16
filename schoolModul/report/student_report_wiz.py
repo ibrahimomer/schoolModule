@@ -24,7 +24,6 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
         #left join hr_violation AS v on (m.violation_id=v.id) where e.id=%s",(emp_id,)) 
         self.cr.execute("select * from students")
         res = self.cr.dictfetchall()
-        print "##########" , res
         return res
     
     '''
@@ -40,7 +39,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
     '''
 
 class school_stu_re_wiz(models.AbstractModel):
-    _name = 'report.sss.students_info_report_wiz'
+    _name = 'report.schoolModul.students_info_report_wiz'
     _inherit = 'report.abstract_report'
     _template = 'schoolModul.students_info_report_wiz'
     _wrapped_report_class = students_info_report_wiz_cla
