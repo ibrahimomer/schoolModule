@@ -24,15 +24,13 @@
 				<th> # </th>
 				<th> name </th>
 				<th> status </th>
-				<th> email</th>
 				<th> date of birth</th>
 				<th> date of joint </th>
 				<th> mobile </th>
-		<tr t-foreach="line(o)" t-as="stu">
+		<tr t-foreach="line()" t-as="stu">
 				<td ><span t-esc="stu['id']"/></td>
 				<td ><span t-esc="stu['name']"/></td>
 				<td ><span t-esc="stu['status']"/></td> 
-      			<td ><span t-esc="stu['email']"/></td>
       			<td ><span t-esc="stu['date_of_birth']"/></td>
       			<td ><span t-esc="stu['date_of_joint']"/></td>
 				<td ><span t-esc="stu['mobile']"/></td>

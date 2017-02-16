@@ -1,5 +1,6 @@
 
 from openerp.report import report_sxw
+from openerp import report
 from openerp import models
 
 class students_info_report_wiz_cla(report_sxw.rml_parse):
@@ -9,7 +10,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
         super(students_info_report_wiz_cla, self).__init__(cr, uid, name, context)
         self.localcontext.update({
-            'line': self.set_context,
+            'line': self._get_students,
         })
         
         self.context = context
@@ -21,8 +22,9 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
         #left join hr_employee e on (m.employee_id=e.id)  
         #left join hr_punishment AS p on (m.punishment_id=p.id)
         #left join hr_violation AS v on (m.violation_id=v.id) where e.id=%s",(emp_id,)) 
-        self.cr.execute("select * from students ")
+        self.cr.execute("select * from students")
         res = self.cr.dictfetchall()
+        print "##########" , res
         return res
     
     '''
@@ -38,7 +40,7 @@ class students_info_report_wiz_cla(report_sxw.rml_parse):
     '''
 
 class school_stu_re_wiz(models.AbstractModel):
-    _name = 'report.ddd.students_info_report_wiz'
+    _name = 'report.sss.students_info_report_wiz'
     _inherit = 'report.abstract_report'
     _template = 'schoolModul.students_info_report_wiz'
     _wrapped_report_class = students_info_report_wiz_cla
