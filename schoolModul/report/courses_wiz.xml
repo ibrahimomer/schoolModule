@@ -24,7 +24,6 @@
 	<td ><span t-esc="formatLang(data['form']['end_date']"/></td> 
     </tr>
 	</table-->
-	
 	<table class="table table-bordered">
 			
 				<th> # </th>
